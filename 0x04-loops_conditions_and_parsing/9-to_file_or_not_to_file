@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Write a Bash script that gives you information about the school file.
+#+ Your Bash script should check if the file exists and print.
+#+ If the file exists, print: Is empty, is not empty or is regular file.
+#+ Must use if and, else.
+
+file="school"
+if [ -e "$file" ]; then
+   echo "$file file exists"
+   if [ -s "$file" ]; then
+      echo "school file is not empty"
+   else
+      echo "school file is empty"
+   fi
+   if [ -f "$file" ]; then
+      echo "school is a regular file"
+   fi
+else
+   echo "school file does not exist"
+fi
